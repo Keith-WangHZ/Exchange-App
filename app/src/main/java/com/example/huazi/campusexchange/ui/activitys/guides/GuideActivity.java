@@ -21,9 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @creation_time: 2017/4/3
- * @author: Vegen
- * @e-mail: vegenhu@163.com
+ * @creation_time: 2017/10/3
+ * @author: huazi
+ * @e-mail: wanghuazhi_beijing@163.com
  * @describe: 引导页
  */
 
@@ -61,8 +61,6 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
                 Button entreBtn = (Button)fl_enter.findViewById(R.id.enter_btn);
                 entreBtn.setTag("enter");
                 entreBtn.setOnClickListener(this);
-//                fl_enter.setTag("enter");
-//                fl_enter.setOnClickListener(this);
             }
             iv_process = (ImageView) view.findViewById(R.id.iv_process);
             iv_process.setBackgroundResource(pics[i]);
@@ -83,7 +81,6 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
     protected void onPause() {
         super.onPause();
         // 如果切换到后台，就设置下次不进入功能引导页
-//        SPUtil.put(GuideActivity.this, AppConstants.FIRST_COME, false);
         finish();
     }
     private void initDots() {

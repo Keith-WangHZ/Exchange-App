@@ -289,27 +289,6 @@ public class ChooseSchool extends BaseActivity implements View.OnClickListener, 
                 }
             }
         }.start();
-
-            /*if (provinceDatas.size() > 0) {
-
-                //弹出popup时，省wheelview中当前的省其实就是省集合的第一个
-                mCurrentProvince = provinceDatas.get(0).getName();
-
-                //根据省cityid查询到第一个省下面市的集合
-                cityDatas = dataHelper.getCityByParentId(db, provinceDatas.get(0).getCityID()+"");
-            }
-            if (cityDatas.size() > 0) {
-                //根据市cityid查询到第一个市集合下面区的集合
-                districtDatas = dataHelper.getDistrictById(db, cityDatas.get(0).getCityID()+"");
-
-            }
-            //wheelview的适配器代码
-            provinceAdapter = new ProvinceAdapter(this, provinceDatas);
-            provinceAdapter.setTextSize(TEXTSIZE);//设置字体大小
-            provinceView.setViewAdapter(provinceAdapter);
-
-            updateCitys();
-            updateAreas();*/
     }
 
     private void updateCitys() {
@@ -457,7 +436,6 @@ public class ChooseSchool extends BaseActivity implements View.OnClickListener, 
 
             case R.id.btn_myinfo_sure:
                 String schoolNameStr = "您所选择的学校是：";
-//                Toast.makeText(this, mCurrentProvince + "-" + mCurrentCity + "-" + mCurrentDistrict, Toast.LENGTH_SHORT).show();
                 switch (mCurrentDistrict) {
                     case "中国人民大学":
                         schoolLogo.setBackground(getResources().getDrawable(R.drawable.renmin));
@@ -492,7 +470,6 @@ public class ChooseSchool extends BaseActivity implements View.OnClickListener, 
                 break;
 
         }
-
 
     }
 

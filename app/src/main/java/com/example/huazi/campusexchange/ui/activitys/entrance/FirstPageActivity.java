@@ -65,6 +65,5 @@ public class FirstPageActivity extends BaseActivity{
         newUserTextView = (TextView) getView(R.id.new_user);
         loginBtn = (Button)findViewById(R.id.btn_login);
         signupBtn = (Button)findViewById(R.id.btn_signup);
-//        signupBtn.setBackgroundColor(getResources().getColor(R.color.btn_blue_normal));
     }
 }

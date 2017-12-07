@@ -18,9 +18,9 @@ import com.example.huazi.campusexchange.utils.ActivityCollectorUtil;
 
 
 /**
- * @creation_time: 2017/3/27
- * @author: Vegen
- * @e-mail: vegenhu@163.com
+ * @creation_time: 2017/10/02
+ * @author: huazi
+ * @e-mail: wanghuazhi_beijing@163.com
  * @describe: 封装Activity
  */
 

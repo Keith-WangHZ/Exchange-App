@@ -51,12 +51,6 @@ public class NetUtils {
                 br.close();
                 result = buffer.toString();
                 Log.d("huazi111", "result = " + result);
-//                mHandler.sendEmptyMessage(USERLOGIN_SUCCESS);
-                /*if(result.equals("ok")){
-                    mHandler.sendEmptyMessage(USERLOGIN_SUCCESS);
-                }else{
-//                    mHandler.sendEmptyMessage(USERLOGIN_FAILED);
-                }*/
                 return result;
             }else{
 //                mHandler.sendEmptyMessage(CONN_FIALED);
@@ -76,21 +70,12 @@ public class NetUtils {
         List<ProvinceModel> provinceModel = new ArrayList<ProvinceModel>();
         try {
             String urlStr = "http://172.168.88.33:8080/getCityName?level="+name;
-//            String urlStr = "http://192.168.1.2:8080/getCityName?level="+name;
             url = new URL(urlStr);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.connect();
             Log.d("huazi111", "urlConnection.getResponseCode()= " + urlConnection.getResponseCode());
             if(urlConnection.getResponseCode()==HttpURLConnection.HTTP_OK){
                 InputStream in = urlConnection.getInputStream();
-                /*BufferedReader br = new BufferedReader(new InputStreamReader(in));
-                String line = null;
-                StringBuffer buffer = new StringBuffer();
-                while((line=br.readLine())!=null){
-                    buffer.append(line);
-                }
-                in.close();
-                br.close();*/
                 result = inputStreamToString(in);
                 int status = urlConnection.getResponseCode();
                 Log.d("huazi111", "result = " + result + ", status = " + status);
@@ -104,20 +89,11 @@ public class NetUtils {
                         break;
 
                 }
-//                mHandler.sendEmptyMessage(USERLOGIN_SUCCESS);
-                /*if(result.equals("ok")){
-                    mHandler.sendEmptyMessage(USERLOGIN_SUCCESS);
-                }else{
-//                    mHandler.sendEmptyMessage(USERLOGIN_FAILED);
-                }*/
-//                return result;
             }else{
 
-//                mHandler.sendEmptyMessage(CONN_FIALED);
             }
         } catch (Exception e) {
             Log.d("huazi111", "exception"+e.getMessage()+e.toString());
-//            mHandler.sendEmptyMessage(CONN_FIALED);
         }finally{
             urlConnection.disconnect();
             Log.d("huazi111", "provinceModel = " + provinceModel);

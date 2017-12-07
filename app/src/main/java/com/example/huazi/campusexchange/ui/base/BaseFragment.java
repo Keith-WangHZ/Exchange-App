@@ -11,16 +11,15 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 /**
- * @creation_time: 2017/3/30
- * @author: Vegen
- * @e-mail: vegenhu@163.com
+ * @creation_time: 2017/10/02
+ * @author: huazi
+ * @e-mail: wanghuazhi_beijing@163.com
  * @describe: 封装BaseFragment
  */
 
 public abstract class BaseFragment extends Fragment {
 
     private View view;
-//    private LayoutInflater inflater;
 
     @Nullable
     @Override
@@ -28,10 +27,6 @@ public abstract class BaseFragment extends Fragment {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-//    public View inflateView(int layoutId){
-//        view = inflater.inflate(layoutId, null);
-//        return view;
-//    }
     protected void showToast(String msg) {
         Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
     }
